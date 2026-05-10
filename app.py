@@ -351,15 +351,68 @@ def main():
     st.set_page_config(page_title="DDPM Streamlit App", layout="wide")
 
     st.markdown(
-        """
-        <style>
-        .stApp {
-            background-color: #0E1117;
-            color: white;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
+    """
+    <style>
+
+    .stApp {
+        background-color: #0E1117;
+        color: #FAFAFA;
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: #161B22;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, label, div {
+        color: #FAFAFA !important;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        color: #CCCCCC;
+    }
+
+    .stTabs [aria-selected="true"] {
+        color: #FF4B4B !important;
+    }
+
+    .stTextInput input,
+    .stNumberInput input,
+    .stTextArea textarea {
+        background-color: #262730 !important;
+        color: white !important;
+        border: 1px solid #444 !important;
+    }
+
+    .stSlider > div > div > div > div {
+        background: #FF4B4B;
+    }
+
+    .stButton button {
+        background-color: #FF4B4B;
+        color: white;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .stButton button:hover {
+        background-color: #E63E3E;
+        color: white;
+    }
+
+    .stFileUploader {
+        background-color: #262730;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .stSuccess {
+        background-color: #123524 !important;
+        color: #A7F3D0 !important;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
     )
 
     st.title("Diffusion Model Demo")
