@@ -349,6 +349,19 @@ def render_image_row(tensors: torch.Tensor, title: str):
 
 def main():
     st.set_page_config(page_title="DDPM Streamlit App", layout="wide")
+
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: #0E1117;
+            color: white;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.title("Diffusion Model Demo")
     st.caption("This app loads the trained DDPM checkpoint from the workspace folder and supports generation, reconstruction, and diffusion visualization.")
 
